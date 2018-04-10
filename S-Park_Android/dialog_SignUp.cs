@@ -59,10 +59,10 @@ namespace S_Park_Android
 
             var view = inflater.Inflate(Resource.Layout.dialog_sign_up, container, false);
 
-            mTxtFirstName = view.FindViewById<EditText>(Resource.Id.txtFirstName);
+            mTxtFirstName = view.FindViewById<EditText>(Resource.Id.txtUserName_SignUp);
             mTxtEmail = view.FindViewById<EditText>(Resource.Id.txtEmail);
-            mTxtPassword = view.FindViewById<EditText>(Resource.Id.txtPassword);
-            mBtnSignUp = view.FindViewById<Button>(Resource.Id.btnDialogEmail);
+            mTxtPassword = view.FindViewById<EditText>(Resource.Id.txtPassword_SignUp);
+            mBtnSignUp = view.FindViewById<Button>(Resource.Id.btnDialogEmail_SignUp);
 
             mBtnSignUp.Click += mBtnSignUp_Click;
 

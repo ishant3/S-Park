@@ -18,6 +18,7 @@ namespace S_Park_Android
     {
 
         private Button mBtnSignUp;
+        private Button mBtnSignIn;
         private ProgressBar mProgressBar;
 
         protected override void OnCreate(Bundle bundle)
@@ -28,7 +29,18 @@ namespace S_Park_Android
             SetContentView(Resource.Layout.Main);
 
             mBtnSignUp = FindViewById<Button>(Resource.Id.btnSignUp);
+            mBtnSignIn = FindViewById<Button>(Resource.Id.btnSignIn);
             mProgressBar = FindViewById<ProgressBar>(Resource.Id.progressBar1);
+
+            mBtnSignIn.Click += (object sender, EventArgs args) =>
+            {
+                //Pull up dialog
+                FragmentTransaction transaction = FragmentManager.BeginTransaction();
+                dialog_SignIn signInDialog = new dialog_SignIn();
+                signInDialog.Show(transaction, "dialog fragment");
+
+                signInDialog.mOnSignInComplete += signInDialog_mOnSignInComplete;
+            };
 
             mBtnSignUp.Click += (object sender, EventArgs args) =>
             {
@@ -40,6 +52,15 @@ namespace S_Park_Android
                 signUpDialog.mOnSignUpComplete += signUpDialog_mOnSignUpComplete;
             };
         }
+
+        private void signInDialog_mOnSignInComplete(object sender, OnSignInEventArgs e)
+        {
+            mProgressBar.Visibility = ViewStates.Visible;
+            Thread thread = new Thread(ActLikeARequest);
+            thread.Start();
+
+        }
+
         void signUpDialog_mOnSignUpComplete(object sender, OnSignUpEventArgs e)
         {
 

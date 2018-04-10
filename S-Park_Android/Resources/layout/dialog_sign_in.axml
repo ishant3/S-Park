@@ -6,7 +6,7 @@
     android:minWidth="300dp"
     android:minHeight="400dp">
   <EditText
-      android:id="@+id/txtUserName_SignUp"
+      android:id="@+id/txtUserName_SignIn"
       android:layout_width="match_parent"
       android:layout_height="35dp"
       android:background="@drawable/edit_text_style"
@@ -16,42 +16,29 @@
       android:layout_marginTop="25dp"
       android:hint="Username"
       android:paddingLeft="10dp"
-      android:textColor="#000" />
-  <EditText
-      android:layout_below="@id/txtUserName_SignUp"
-      android:inputType="textEmailAddress"
-      android:layout_width="match_parent"
-      android:layout_height="35dp"
-      android:id="@+id/txtEmail"
-      android:background="@drawable/edit_text_style"
-      android:layout_marginBottom="10dp"
-      android:layout_marginLeft="20dp"
-      android:layout_marginRight="20dp"
-      android:hint="Email"
-      android:paddingLeft="10dp"
-      android:textColor="#000" />
+      android:textColor="#000" /> 
   <EditText
       android:inputType="textPassword"
       android:layout_width="match_parent"
       android:layout_height="35dp"
-      android:id="@+id/txtPassword_SignUp"
+      android:id="@+id/txtPassword_SignIn"
       android:background="@drawable/edit_text_style"
       android:layout_marginLeft="20dp"
       android:layout_marginRight="20dp"
       android:hint="Password"
       android:paddingLeft="10dp"
       android:textColor="#000"
-      android:layout_below="@id/txtEmail" />
+      android:layout_below="@id/txtUserName_SignIn" />
   <RelativeLayout
       android:layout_width="wrap_content"
       android:layout_height="wrap_content"
-      android:layout_below="@id/txtPassword_SignUp"
+      android:layout_below="@id/txtPassword_SignIn"
       android:layout_marginTop="50dp">
     <Button
-        android:text="Sign Up!"
+        android:text="Sign In!"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/btnDialogEmail_SignUp"
+        android:id="@+id/btnDialogSignIn"
         android:textSize="20dp"
         android:textColor="#fff"
         android:textStyle="bold"
@@ -60,7 +47,7 @@
         android:paddingRight="5dp"
         android:height="70dp"
         android:paddingTop="2dp"
-        android:background="@drawable/ButtonSignUpStyle"
+        android:background="@drawable/ButtonSignInStyle"
         android:layout_centerHorizontal="true"
         android:layout_marginLeft="30dp" />
   </RelativeLayout>
