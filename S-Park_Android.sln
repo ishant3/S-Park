@@ -5,6 +5,13 @@ VisualStudioVersion = 15.0.27428.2015
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "S-Park_Android", "S-Park_Android\S-Park_Android.csproj", "{35B55E22-DFC3-4A3C-9063-BBF533A7112D}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WcfServiceTest", "WcfServiceTest\WcfServiceTest.csproj", "{F14AA1FC-E216-4018-936F-1C90BD6F319C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MVCWebAppTest", "MVCWebAppTest\MVCWebAppTest.csproj", "{A2C157FD-06B6-43A9-9AC1-5BBD21F6E047}"
+	ProjectSection(ProjectDependencies) = postProject
+		{F14AA1FC-E216-4018-936F-1C90BD6F319C} = {F14AA1FC-E216-4018-936F-1C90BD6F319C}
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -17,6 +24,14 @@ Global
 		{35B55E22-DFC3-4A3C-9063-BBF533A7112D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{35B55E22-DFC3-4A3C-9063-BBF533A7112D}.Release|Any CPU.Build.0 = Release|Any CPU
 		{35B55E22-DFC3-4A3C-9063-BBF533A7112D}.Release|Any CPU.Deploy.0 = Release|Any CPU
+		{F14AA1FC-E216-4018-936F-1C90BD6F319C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F14AA1FC-E216-4018-936F-1C90BD6F319C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F14AA1FC-E216-4018-936F-1C90BD6F319C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F14AA1FC-E216-4018-936F-1C90BD6F319C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A2C157FD-06B6-43A9-9AC1-5BBD21F6E047}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A2C157FD-06B6-43A9-9AC1-5BBD21F6E047}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A2C157FD-06B6-43A9-9AC1-5BBD21F6E047}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A2C157FD-06B6-43A9-9AC1-5BBD21F6E047}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

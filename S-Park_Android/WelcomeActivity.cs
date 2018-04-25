@@ -58,6 +58,7 @@ namespace S_Park_Android
             mProgressBar.Visibility = ViewStates.Visible;
             Thread thread = new Thread(ActLikeARequest);
             thread.Start();
+           
 
         }
 
@@ -74,6 +75,8 @@ namespace S_Park_Android
         private void ActLikeARequest()
         {
             Thread.Sleep(3000);
+            Intent nextActivity = new Intent(this, typeof(ParkSpace_SelectionActivity));
+            StartActivity(nextActivity);
 
             RunOnUiThread(() => { mProgressBar.Visibility = ViewStates.Invisible; });
             int x = Resource.Animation.slide_right;

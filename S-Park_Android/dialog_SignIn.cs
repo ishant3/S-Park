@@ -55,8 +55,7 @@ namespace S_Park_Android
             mTxtPassword_SignIn = view.FindViewById<EditText>(Resource.Id.txtPassword_SignIn);
             mBtnSignIn = view.FindViewById<Button>(Resource.Id.btnDialogSignIn);
 
-            mBtnSignIn.Click += mBtnSignIn_Click;
-
+            mBtnSignIn.Click += mBtnSignIn_Click;      
             return view;
         }
 
@@ -64,7 +63,11 @@ namespace S_Park_Android
         {
             //User has clicked the sign up button
             mOnSignInComplete.Invoke(this, new OnSignInEventArgs(mTxtUserName_SignIn.Text, mTxtPassword_SignIn.Text));
+            //var nextActivity = new Intent(Activity, typeof(ParkSpace_SelectionActivity));
+            //StartActivity(nextActivity);
+          
             this.Dismiss();
+           
         }
 
         public override void OnActivityCreated(Bundle savedInstanceState)

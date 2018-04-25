@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/WcfServiceTest.Data.Entities" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/WcfServiceTest.Data.Entities" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:complexType name="ArrayOfParking_Space">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="Parking_Space" nillable="true" type="tns:Parking_Space" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfParking_Space" nillable="true" type="tns:ArrayOfParking_Space" />
+  <xs:complexType name="Parking_Space">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Id" type="xs:int" />
+      <xs:element minOccurs="0" name="Status" type="xs:boolean" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Parking_Space" nillable="true" type="tns:Parking_Space" />
+</xs:schema>
